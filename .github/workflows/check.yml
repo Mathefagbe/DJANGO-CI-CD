@@ -88,6 +88,8 @@ jobs:
           port: ${{ secrets.EC2_PORT || 22 }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            sudo usermod -aG docker ubuntu
+            newgrp docker
             cd /home/ubuntu/app
             docker-compose down || true  # Continue even if no containers are running
             docker-compose build --no-cache
