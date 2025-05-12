@@ -68,8 +68,8 @@ jobs:
           strip_components: 1
           script: |
             cat > /home/ubuntu/app/.env << 'EOF'
-            SECRET_KEY: ${{secrets.SECRET_KEY}}
-            DEBUG= '${{secrets.DEBUG}}''
+            SECRET_KEY= '${{secrets.SECRET_KEY}}'
+            DEBUG= '${{secrets.DEBUG}}'
             EOF
 
             # Secure the .env file
