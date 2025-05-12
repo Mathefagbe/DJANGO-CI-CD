@@ -4,3 +4,4 @@ env/
 folio-env/
 .src/
 src/
+.env
