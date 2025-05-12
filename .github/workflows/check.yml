@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SECRET_KEY: ${{secrets.SECRET_KEY}}
+      DEBUG: ${{secrets.DEBUG}}
       # DJANGO_SETTINGS_MODULE: your_project.settings
 
     steps:
@@ -88,13 +89,9 @@ jobs:
           port: ${{ secrets.EC2_PORT || 22 }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            cd /home/ubuntu/app
             sudo usermod -aG docker ubuntu
             newgrp docker
-            cd /home/ubuntu/app
             docker-compose down || true  # Continue even if no containers are running
             docker-compose build --no-cache
             docker-compose up -d
-            # # Run migrations if needed
-            # docker-compose exec app python manage.py migrate --noinput
-            # # Collect static files if needed
-            # docker-compose exec app python manage.py collectstatic --noinput
