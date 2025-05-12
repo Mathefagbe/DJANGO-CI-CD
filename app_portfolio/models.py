@@ -22,7 +22,7 @@ class Projects(models.Model):
     body=models.TextField(null=False,blank=False)
     slug=models.SlugField(max_length=200,null=False,blank=False)
     created_at=models.DateTimeField(auto_now=True)
-    updated_at=models.DateTimeFieldE(auto_now_add=True)
+    updated_at=models.DateTimeField(auto_now_add=True)
 
 
 class ProjectKeyFeature(models.Model):
