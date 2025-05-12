@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     name: Run Tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     env:
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       # DJANGO_SETTINGS_MODULE: your_project.settings
@@ -33,7 +33,7 @@ jobs:
   deploy:
     name: Deploy to EC2
     needs: test
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
