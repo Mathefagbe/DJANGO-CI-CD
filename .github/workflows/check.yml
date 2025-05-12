@@ -62,6 +62,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           port: ${{ secrets.EC2_PORT || 22 }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             # Install Docker
             sudo apt-get update
@@ -85,6 +86,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           port: ${{ secrets.EC2_PORT || 22 }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/app
             docker-compose down || true  # Continue even if no containers are running
