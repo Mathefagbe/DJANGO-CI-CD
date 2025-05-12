@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About Me - Backend Developer{% endblock %}
+{% block about_active %}text-secondary border-b-2 border-secondary{% endblock %}
+{% block mobile_about_active %}text-secondary{% endblock %}
+
+{% block content %}
+<section class="py-8">
+    <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+        <div class="md:w-2/3">
+            <h1 class="text-4xl font-bold mb-4">About Me</h1>
+            <p class="text-xl text-gray-600 mb-4">A passionate backend developer with 5+ years of experience building
+                scalable systems.</p>
+        </div>
+        <div class="md:w-1/3 flex justify-center">
+            <img src="images/profile.jpg" alt="John Doe - Backend Developer"
+                class="rounded-full w-64 h-64 object-cover">
+        </div>
+    </div>
+</section>
+
+<section class="py-8">
+    <h2 class="text-3xl font-bold mb-6">My Journey</h2>
+    <div class="space-y-4">
+        <p>I started my programming journey in college where I discovered my passion for solving complex problems
+            through code. After graduating with a degree in Computer Science, I joined a startup where I built my first
+            production-level backend system.</p>
+        <p>Over the years, I've worked with various technologies and frameworks, always focusing on creating efficient,
+            maintainable, and scalable backend solutions. I'm particularly interested in distributed systems, database
+            optimization, and API design.</p>
+        <p>When I'm not coding, you can find me hiking, reading technical books, or contributing to open-source
+            projects.</p>
+    </div>
+</section>
+
+<section class="py-8">
+    <h2 class="text-3xl font-bold mb-6">Work Experience</h2>
+    <div class="relative border-l-2 border-secondary pl-8 ml-4 space-y-10">
+        <div class="relative">
+            <div class="absolute -left-12 mt-1.5 h-6 w-6 rounded-full border-2 border-secondary bg-light"></div>
+            <div>
+                <h3 class="text-xl font-semibold text-secondary">Senior Backend Developer</h3>
+                <h4 class="text-lg text-gray-600">Tech Solutions Inc.</h4>
+                <p class="text-gray-500 mb-2">2021 - Present</p>
+                <p>Leading the development of microservices architecture for a SaaS platform. Implemented CI/CD
+                    pipelines and containerization strategies.</p>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="absolute -left-12 mt-1.5 h-6 w-6 rounded-full border-2 border-secondary bg-light"></div>
+            <div>
+                <h3 class="text-xl font-semibold text-secondary">Backend Developer</h3>
+                <h4 class="text-lg text-gray-600">Digital Innovations</h4>
+                <p class="text-gray-500 mb-2">2018 - 2021</p>
+                <p>Developed and maintained RESTful APIs for mobile applications. Optimized database queries and
+                    implemented caching strategies.</p>
+            </div>
+        </div>
+        <div class="relative">
+            <div class="absolute -left-12 mt-1.5 h-6 w-6 rounded-full border-2 border-secondary bg-light"></div>
+            <div>
+                <h3 class="text-xl font-semibold text-secondary">Junior Developer</h3>
+                <h4 class="text-lg text-gray-600">StartUp Co.</h4>
+                <p class="text-gray-500 mb-2">2016 - 2018</p>
+                <p>Built backend services for a social media platform. Worked with Node.js and MongoDB.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-8">
+    <h2 class="text-3xl font-bold mb-6">Education</h2>
+    <div class="space-y-8">
+        <div>
+            <h3 class="text-xl font-semibold text-secondary">Master of Science in Computer Science</h3>
+            <h4 class="text-lg text-gray-600">University of Technology</h4>
+            <p class="text-gray-500 mb-2">2014 - 2016</p>
+            <p>Specialized in Distributed Systems and Database Management</p>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold text-secondary">Bachelor of Science in Computer Science</h3>
+            <h4 class="text-lg text-gray-600">State University</h4>
+            <p class="text-gray-500 mb-2">2010 - 2014</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-8">
+    <h2 class="text-3xl font-bold mb-6">Technical Skills</h2>
+    <div class="space-y-6">
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Programming Languages</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">JavaScript/Node.js</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Python</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Java</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Go</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">PHP</span>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Databases</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">PostgreSQL</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">MongoDB</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">MySQL</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Redis</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Elasticsearch</span>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">DevOps & Cloud</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Docker</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Kubernetes</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">AWS (EC2, S3, Lambda, RDS)</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">CI/CD (Jenkins, GitHub Actions)</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Terraform</span>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Tools & Frameworks</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Express.js</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Django</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">Spring Boot</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">GraphQL</span>
+                <span class="px-3 py-1 bg-gray-200 rounded-md font-medium">RabbitMQ</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
